@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700;800&display=swap');
+
+:root {
+    --black-text-color: #313131;
+    --gray-border-color: #e7e7e7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(30deg, transparent 0%, rgba(234,212,236,0.56) 30%, rgba(208,207,243,0.37) 40%, rgba(187,218,203,0.24) 100%),
+    linear-gradient(255deg, rgb(246,206,213) 0%, rgb(203,214,180) 70%, rgb(221,230,187) 100%);
+    position: relative;
+    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+    color: var(--black-text-color);
+}
+
+.body__game {
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%); 
+}
+
+.game {
+    width: 50%;
+    min-width: 600px;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.info-part {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1em;
+    border: 2px solid var(--gray-border-color);
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 1em;
+    width: 30%;
+}
+
+.score-board {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1em;
+    padding: 1em;
+}
+
+.header {
+    font-size: 1.5em;
+}
+
+.numbers {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    row-gap: 2em;
+    justify-content: space-evenly;
+    font-size: 4em;
+    font-weight: 700;
+}
+
+.players {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    row-gap: 2em;
+    justify-content: space-between;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.buttons-board {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 1em;
+}
+
+.button {
+    width: 100%;
+    height: 2.5em;
+    border-radius: .5em;
+    border: none;
+    font-size: 1em;
+    font-weight: 700;
+    transition: all .7s;
+    letter-spacing: .1em;
+}
+
+.button:hover {
+    cursor: pointer;
+    opacity: .5;
+}
+
+.playground {
+    width: 65%;
+    padding: 1em;
+    border: 2px solid var(--gray-border-color);
+    border-radius: 1em;
+    background-color: rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.right-part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    row-gap: 1em;
+    height: 100%;
+    width: 60%;
+}
+
+.messages-board {
+    width: 100%;
+    padding-top: 6em;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+}
+
+.results-text {
+    font-size: 2em;
+    font-weight: 500;
+    text-align: center;
+}
+
+.choice-text {
+    font-size: 1em;
+    font-weight: 700;
+    text-align: center;
+}
+
+.signs-board {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1em;
+    width: 100%;
+}
+
+.images-board {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.image-opponent {
+    height: 400px;
+    width: 200px;
+    transform: rotate(180deg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-bottom: 2px solid var(--gray-border-color);
+}
+
+.image-player {
+    height: 400px;
+    width: 200px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-bottom: 2px solid var(--gray-border-color);
+}
+
+
+                /* Styles for modal window */
+
+.body__modal-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.modal-bg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.hidden {
+    display: none;
+}
+.modal-bg__content {
+    z-index: 2;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.content {
+    width: 300px;
+    height: 300px;
+    padding: 1em;
+    border: 2px solid var(--gray-border-color);
+    border-radius: .5em;
+    background: rgba(255, 255 ,255, .3);
+    transition: all ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+}

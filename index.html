@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/icon.png">
+    <link rel="stylesheet" href="styles.css">
+    <title>Rock! Paper! Scissors! game</title>
+</head>
+<body>
+    <div class="body__game game">
+        <div class="game__info-part info-part">
+            <div class="info-part__score-board score-board">
+                <h2 class="score-board__header header">Score</h2>
+                <div class="score-board__numbers numbers">
+                    <p class="numbers__num-human" id="player-score">0</p>
+                    <p class="numbers__divider">:</p>
+                    <p class="numbers__num-comp" id="comp-score">0</p>
+                </div>
+                <div class="score-board__players players">
+                    <p class="players__play-human">You</p>
+                    <p class="players__play-comp">Computer</p>
+                </div>
+            </div>
+            <div class="info-part__buttons-board buttons-board">
+                <button class="buttons-board__button button" id="open-modale">Show rules</button>
+                <button class="buttons-board__button button" id="reset-score">Reset the score<p>
+            </div>    
+        </div>
+        <div class="game__playground playground">
+            <div class="playground__right-part right-part">
+                <div class="playground__messages-board messages-board">
+                    <p class="messages-board__results-text results-text" id="result"></p>
+                    <p class="messages-board__comp-text results-text" id="comp-choice"></p>
+                </div>
+                <div class="playground__signs-board signs-board">
+                    <p class="signs-board__choice-text choice-text">Make your choice:</p>
+                    <button class="signs-board__rock rock button" id="rock">Rock!</button> 
+                    <button class="signs-board__paper paper button" id="paper">Paper!</button> 
+                    <button class="signs-board__scissors scissors button" id="scissors">Scissors!</button> 
+                </div>
+            </div>
+            <div class="playground__images-board images-board">
+                <div class="images-board__image-opponent image-opponent" id="comp-image"></div>
+                <div class="images-board__image-player image-player" id="player-image"></div>
+            </div>
+        </div>
+    </div>
+    <div class="body__modal-bg modal-bg hidden" id="modale">
+        <div class="modal-bg__content content">
+            <p class="modal-bg__text text">
+                Each of two players randomly choose one of three 
+                hand signs: rock, paper or scissors.<br><br>
+                -> Rock wins against scissors.<br>
+                -> Paper wins against rock.<br>
+                -> Scissors win against paper.
+            </p>
+            <button class="modale-bg__button button" id="close-modale">Got it! Close the window</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
